@@ -6,7 +6,7 @@ const Intro = ({}: IntroProps) => {
   return (
     <div className="intro">
       <div className="intro__top">
-        <span className="title">Fit Too</span>
+        <span className="title">FitToo</span>
         <span className="description">
           코치와 회원이 함께 만드는
           <br />

@@ -2,7 +2,7 @@ import React from 'react';
 
 import Header from 'components/main/Header';
 import Intro from 'components/main/Intro';
-import IntroImages from 'components/main/IntroImages';
+import IntroPhoneImage from 'assets/svg/IntroPhoneImage';
 
 type LandingIntroProps = {};
 
@@ -12,7 +12,7 @@ const LandingIntro = ({}: LandingIntroProps) => {
       <Header />
       <div className="landing-intro__content">
         <Intro />
-        <IntroImages />
+        <IntroPhoneImage />
       </div>
     </div>
   );
