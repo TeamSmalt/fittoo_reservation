@@ -1,11 +1,7 @@
-import Calendar from 'components/Calendar';
 import React from 'react';
+
 function App() {
-  return (
-    <div className="App">
-      <Calendar />
-    </div>
-  );
+  return <div className="App"></div>;
 }
 
 export default App;
