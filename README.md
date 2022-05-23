@@ -1,5 +1,12 @@
 # Fit Too
 
+## 브랜치
+
+- master
+- dev
+- feature
+- hotfix
+
 ## 페이지별 기능 개발
 
 - 김용민 : 랜딩 페이지, 채팅, 검색
