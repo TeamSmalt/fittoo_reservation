@@ -34,9 +34,9 @@ const ReservationContainer = ({}: ReservationContainerProps) => {
           </div>
         </div>
       </div>
-      <div className="reservation__calendar">
-        <Calendar />
-      </div>
+
+      <Calendar />
+
       <div className="reservation__time"></div>
     </div>
   );
