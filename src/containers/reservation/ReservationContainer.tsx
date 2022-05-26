@@ -1,43 +1,33 @@
 import React from 'react';
 
-import LeftArrow from 'assets/svg/LeftArrow';
-import Phone from 'assets/svg/Phone';
-import Message from 'assets/svg/Message';
-import Calendar from 'components/calendar/Calendar';
+import Calendar from 'components/common/Calendar';
+import PrevStage from 'components/common/PrevStage';
+import CoachCard from 'components/reservation/CoachCard';
+
+import { useNavigate } from 'react-router-dom';
+import SelectTime from 'components/reservation/SelectTime';
 
 type ReservationContainerProps = {};
 
 const ReservationContainer = ({}: ReservationContainerProps) => {
+  const navigate = useNavigate();
+
+  //! 이전 페이지로 이동
+  const handleMovePrevState = () => navigate(-1);
+
   return (
     <div className="reservation">
-      <div className="reservation__title">
-        <LeftArrow onClick={() => console.log('hi')} />
-        <span>예약하기</span>
-      </div>
-      <div className="reservation__coach">
-        <div className="reservation__coachImage">이미지 영역</div>
-        <div className="reservation__coachInfo">
-          <span className="reservation__coachInfo--name">성석원 코치님</span>
-          <span className="reservation__coachInfo--description">
-            근성장 보장, 체계적인 식단관리로 확실하게 변화시켜드립니다.
-          </span>
-          <div className="reservation__coachInfo--rate">
-            <span>💚💚💚💚💚</span>
-            <span>4.82(122)</span>
-          </div>
-          <div className="reservation__coachInfo--send">
-            <a href="tel:01055879732">
-              <Phone />
-            </a>
+      <PrevStage title="예약하기" onClick={handleMovePrevState} />
 
-            <Message />
-          </div>
-        </div>
-      </div>
+      <CoachCard />
 
       <Calendar />
 
-      <div className="reservation__time"></div>
+      <SelectTime />
+
+      <div className="reservation__reserve">
+        <button>예약하기</button>
+      </div>
     </div>
   );
 };

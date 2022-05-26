@@ -23,6 +23,7 @@
       cursor: pointer;
     }
   }
+
   &__days {
     display: flex;
     justify-content: space-between;
@@ -33,31 +34,31 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
 
-    &--koDay {
-      font-weight: 400;
-      font-size: 12px;
-      line-height: 12px;
-      color: #72777a;
-      margin-bottom: 8px;
+  &__koDay {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 12px;
+    color: #72777a;
+    margin-bottom: 8px;
+  }
+
+  &__selectBtn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px;
+    border-radius: 10px;
+
+    &:hover,
+    &.calendar--selected {
+      color: #fff;
+      background-color: #1876fb;
     }
+  }
 
-    &--button {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 8px;
-      border-radius: 10px;
-
-      &.select,
-      &:hover {
-        color: #fff;
-        background-color: #1876fb;
-      }
-    }
-
-    &--event {
-      font-size: 18px;
-    }
+  &__event {
+    font-size: 18px;
   }
 }

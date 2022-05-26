@@ -1,67 +1,103 @@
 .reservation {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 2.5rem;
 
-  &__title {
+  &__reserve > button {
+    width: 100%;
     display: flex;
+    justify-content: center;
     align-items: center;
-
-    span {
-      font-size: 18px;
-      margin: 0 auto;
-    }
+    padding: 1.25rem 8.125rem;
+    font-weight: 500;
+    font-size: 1.2rem;
+    border-radius: 0.75rem;
+    background-color: #1876fb;
+    color: #fff;
+    outline: none;
   }
+}
 
-  &__coach {
-    height: 180px;
-    display: flex;
-    gap: 20px;
-  }
+.coach-card {
+  height: 11.25rem;
+  display: flex;
+  gap: 1.25rem;
 
-  &__coachImage {
+  &__image {
     flex: 0.3;
-    border-radius: 12px;
-    border: 1px solid blue;
+    border-radius: 0.75rem;
+    border: 1px solid #b6b6b6;
   }
 
-  &__coachInfo {
+  &__info {
     flex: 0.7;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 8px;
+    gap: 0.5rem;
+  }
 
-    &--name {
-      font-size: 18px;
-      font-weight: 500;
-      color: #202325;
-    }
+  &__name {
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: #202325;
+  }
 
-    &--description {
-      color: #72777a;
-    }
+  &__description {
+    color: #72777a;
+  }
 
-    &--rate {
-      display: flex;
-      gap: 8px;
+  &__rate {
+    display: flex;
+    gap: 0.5rem;
 
-      span {
-        font-size: 14px;
+    span {
+      font-size: 0.875rem;
 
-        &:last-child {
-          color: #72777a;
-        }
+      &:last-child {
+        color: #72777a;
       }
     }
+  }
+  &__send {
+    display: flex;
+    gap: 0.5rem;
 
-    &--send {
-      display: flex;
-      gap: 8px;
-
-      svg {
-        cursor: pointer;
-      }
+    svg {
+      cursor: pointer;
     }
+  }
+}
+
+.select-time {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0.875rem;
+
+  &__time {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.8rem 0.6rem;
+    border-radius: 0.5rem;
+    background-color: #e8f1ff;
+    font-size: 0.9rem;
+
+    &:hover {
+      background-color: #1876fb;
+      color: #fff;
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .select-time {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .select-time {
+    grid-template-columns: repeat(4, 1fr);
   }
 }

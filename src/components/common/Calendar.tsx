@@ -50,17 +50,17 @@ const Calendar = ({}: CalendarProps) => {
       <div className="calendar__days">
         {getDaysOfWeek.map((week) => (
           <div className="calendar__day" key={week.koDay}>
-            <span className="calendar__day--koDay">{week.koDay}</span>
+            <span className="calendar__koDay">{week.koDay}</span>
             <button
               className={
                 currentDate.get('date') === week.dayNum
-                  ? 'calendar__day--button select'
-                  : 'calendar__day--button'
+                  ? 'calendar__selectBtn calendar--selected'
+                  : 'calendar__selectBtn'
               }
               onClick={() => onChangeCurrentDate(week.dayNum)}
             >
-              <span className="calendar__day--dayNum">{week.dayNum}</span>
-              <span className="calendar__day--event">・</span>
+              <span className="calendar__dayNum">{week.dayNum}</span>
+              <span className="calendar__event">・</span>
             </button>
           </div>
         ))}

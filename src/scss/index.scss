@@ -4,7 +4,8 @@
 @import 'reservation.scss';
 
 // component
-@import 'calendar.scss';
+@import './common/calendar.scss';
+@import './common/prevStage.scss';
 
 * {
   margin: 0;
