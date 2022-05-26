@@ -9,27 +9,31 @@ type CalendarProps = {};
 const days = ['일', '월', '화', '수', '목', '금', '토'];
 
 const Calendar = ({}: CalendarProps) => {
+  //! 현재 날짜
   const [currentDate, setCurrentDate] = useState<dayjs.Dayjs>(dayjs());
 
+  const onChangeCurrentDate = (date: number) => setCurrentDate(dayjs().set('date', date));
+
+  //! 현재 달
   const month = useMemo(() => currentDate.get('month') + 1, [currentDate]);
 
+  //! 한 주의 시작과 끝
   const getDaysOfWeek = useMemo(() => {
     const dateArr = [];
 
-    let startOfWeek = parseInt(currentDate.startOf('week').format('DD'));
-    const lastDate = currentDate.daysInMonth();
-
     for (let i = 0; i < 7; i++) {
-      if (startOfWeek > lastDate) startOfWeek = 1;
+      const date = currentDate.day(i).format('DD');
 
-      dateArr.push({ dayNum: startOfWeek++, koDay: days[i] });
+      dateArr.push({ dayNum: parseInt(date), koDay: days[i] });
     }
 
     return dateArr;
   }, [currentDate]);
 
+  //! 몇 주
   const getWeekNum = useMemo(() => Math.ceil(currentDate.get('D') / 7), [currentDate]);
 
+  //! 이전 주, 다음 주
   const nextWeek = () => setCurrentDate(currentDate.add(7, 'day'));
   const prevWeek = () => setCurrentDate(currentDate.subtract(7, 'day'));
 
@@ -47,7 +51,14 @@ const Calendar = ({}: CalendarProps) => {
         {getDaysOfWeek.map((week) => (
           <div className="calendar__day" key={week.koDay}>
             <span className="calendar__day--koDay">{week.koDay}</span>
-            <button className="calendar__day--button">
+            <button
+              className={
+                currentDate.get('date') === week.dayNum
+                  ? 'calendar__day--button select'
+                  : 'calendar__day--button'
+              }
+              onClick={() => onChangeCurrentDate(week.dayNum)}
+            >
               <span className="calendar__day--dayNum">{week.dayNum}</span>
               <span className="calendar__day--event">・</span>
             </button>
