@@ -1,5 +1,7 @@
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css');
 
+@import 'root.scss';
+
 * {
   margin: 0;
   padding: 0;
@@ -29,10 +31,6 @@ body {
   height: 100%;
 }
 
-body {
-  min-width: 1280px;
-}
-
 img,
 picture,
 video,
@@ -58,5 +56,4 @@ table {
   height: 100%;
   max-width: 768px;
   margin: 0 auto;
-  padding: 80px 0;
 }
