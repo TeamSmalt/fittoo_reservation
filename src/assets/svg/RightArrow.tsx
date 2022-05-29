@@ -1,10 +1,10 @@
 import React from 'react';
 
-type CalendarRightArrowProps = {
+type RightArrowProps = {
   onClick: () => void;
 };
 
-const CalendarRightArrow = ({ onClick }: CalendarRightArrowProps) => {
+const RightArrow = ({ onClick }: RightArrowProps) => {
   return (
     <svg
       width="25"
@@ -25,4 +25,4 @@ const CalendarRightArrow = ({ onClick }: CalendarRightArrowProps) => {
   );
 };
 
-export default CalendarRightArrow;
+export default RightArrow;
