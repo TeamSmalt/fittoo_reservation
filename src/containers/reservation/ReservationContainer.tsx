@@ -3,9 +3,9 @@ import React from 'react';
 import Calendar from 'components/common/Calendar';
 import PrevStage from 'components/common/PrevStage';
 import CoachCard from 'components/reservation/CoachCard';
+import SelectTime from 'components/reservation/SelectTime';
 
 import { useNavigate } from 'react-router-dom';
-import SelectTime from 'components/reservation/SelectTime';
 
 type ReservationContainerProps = {};
 
