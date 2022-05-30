@@ -14,6 +14,7 @@ const AuthContainer = () => {
       </section>
 
       <section className="login-btn-group">
+        {/* button 을 component로 바꿔도 좋을듯 */}
         <button className="kakao-login">
           <KakaoLogo />
           카카오 로그인
