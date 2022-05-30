@@ -1,7 +1,5 @@
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css');
 
-@import 'root.scss';
-
 * {
   margin: 0;
   padding: 0;
@@ -10,6 +8,7 @@
     sans-serif;
   color: inherit;
 }
+
 *,
 :after,
 :before {
@@ -57,3 +56,11 @@ table {
   max-width: 768px;
   margin: 0 auto;
 }
+
+@import 'root.scss';
+// pages
+@import 'reservation.scss';
+
+// component
+@import './common/calendar.scss';
+@import './common/prevStage.scss';

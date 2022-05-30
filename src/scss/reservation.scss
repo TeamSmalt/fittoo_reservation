@@ -1,0 +1,103 @@
+.reservation {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+
+  &__reserve > button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.25rem 8.125rem;
+    font-weight: 500;
+    font-size: 1.2rem;
+    border-radius: 0.75rem;
+    background-color: #1876fb;
+    color: #fff;
+    outline: none;
+  }
+}
+
+.coach-card {
+  height: 11.25rem;
+  display: flex;
+  gap: 1.25rem;
+
+  &__image {
+    flex: 0.3;
+    border-radius: 0.75rem;
+    border: 1px solid #b6b6b6;
+  }
+
+  &__info {
+    flex: 0.7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  &__name {
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: #202325;
+  }
+
+  &__description {
+    color: #72777a;
+  }
+
+  &__rate {
+    display: flex;
+    gap: 0.5rem;
+
+    span {
+      font-size: 0.875rem;
+
+      &:last-child {
+        color: #72777a;
+      }
+    }
+  }
+  &__send {
+    display: flex;
+    gap: 0.5rem;
+
+    svg {
+      cursor: pointer;
+    }
+  }
+}
+
+.select-time {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0.875rem;
+
+  &__time {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.8rem 0.6rem;
+    border-radius: 0.5rem;
+    background-color: #e8f1ff;
+    font-size: 0.9rem;
+
+    &:hover {
+      background-color: #1876fb;
+      color: #fff;
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .select-time {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .select-time {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
