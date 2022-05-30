@@ -1,0 +1,63 @@
+@charset "utf-8";
+
+/* ========================================
+root
+
+ -- 컬러 변수명 뒤에 아무것도 붙어 있지 않은것이 Base
+
+===========================================*/
+
+:root {
+  --white: #fff;
+  --danger: #ff5353;
+
+  // font-color black
+  --black: #404446;
+  --black-dark: #303437;
+  --black-darker: #202325;
+  --black-darkest: #090a0a;
+  --black-light: #6c7072;
+  --black-lighter: #72777a;
+
+  // font-color white
+  --grey: #cdcfd0;
+  --grey-dark: #979c9e;
+  --grey-light: #e3e5e5;
+  --grey-lighter: F2F4F5;
+  --grey-lightest: #f7f9fa;
+
+  // theme color
+  --primary: #1876fb;
+  --primary-darkest: #135ec9;
+  --primary-light: #8bbbfd;
+  --primary-lighter: #c5ddfe;
+  --primary-lightest: #e8f1ff;
+
+  // badge color red
+  --red: #ff5247;
+  --red-darkest: #d3180c;
+  --red-light: #ff6d6d;
+  --red-lighter: #ff9898;
+  --red-lightest: #ffe5e5;
+
+  // badge color green
+  --green: #23c16b;
+  --green-darkest: #198155;
+  --green-light: #4cd471;
+  --green-lighter: #7dde86;
+  --green-lightest: #ecfce5;
+
+  // badge color yellow
+  --yellow: #ffb323;
+  --yellow-darkest: #a05e03;
+  --yellow-light: #ffc462;
+  --yellow-lighter: #ffd188;
+  --yellow-lightest: #ffefd7;
+
+  // badge color blue
+  --blue: #48a7f8;
+  --blue-darkest: #0065d0;
+  --blue-light: #6ec2fb;
+  --blue-lighter: #9bdcfd;
+  --blue-lightest: #c9f0ff;
+}

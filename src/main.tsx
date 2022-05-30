@@ -1,4 +1,5 @@
 import './scss/index.scss';
+import './scss/auth.scss';
 
 import React from 'react';
 import ReactDOM from 'react-dom';
