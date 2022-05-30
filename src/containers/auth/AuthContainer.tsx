@@ -1,12 +1,25 @@
 import React from 'react';
-
 import Logo from 'assets/svg/Logo';
 import GoogleLogo from 'assets/svg/GoogleLogo';
 import AppleLogoWhite from 'assets/svg/AppleLogoWhite';
 import KakaoLogo from 'assets/svg/KakaoLogo';
 import { Link } from 'react-router-dom';
 
+const kakao = (window as any).Kakao;
+
 const AuthContainer = () => {
+  const kakaoLogin = () => {
+    console.log(kakao);
+    kakao.Auth.authorize();
+    // Kakao.Auth.login({
+    //   success: function (authObj) {
+    //     alert(JSON.stringify(authObj));
+    //   },
+    //   fail: function (err) {
+    //     alert(JSON.stringify(err));
+    //   },
+    // });
+  };
   return (
     <div className="auth">
       <section className="logo-section">
@@ -15,7 +28,7 @@ const AuthContainer = () => {
 
       <section className="login-btn-group">
         {/* button 을 component로 바꿔도 좋을듯 */}
-        <button className="kakao-login">
+        <button className="kakao-login" onClick={kakaoLogin}>
           <KakaoLogo />
           카카오 로그인
         </button>

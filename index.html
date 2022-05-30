@@ -8,6 +8,12 @@
       src="https://kit.fontawesome.com/ee2353f8e7.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+    <script type="module">
+      Kakao.init(import.meta.env.VITE_KAKAO_API_KEY);
+
+      console.log(Kakao.isInitialized());
+    </script>
     <title>Fittoo</title>
   </head>
   <body>
