@@ -12,7 +12,7 @@
     font-weight: 500;
     font-size: 1.2rem;
     border-radius: 0.75rem;
-    background-color: #1876fb;
+    background-color: var(--primary);
     color: #fff;
     outline: none;
   }
@@ -21,19 +21,20 @@
 .coach-card {
   height: 11.25rem;
   display: flex;
+  align-items: center;
   gap: 2rem;
 
   &__image {
     border-radius: 50%;
 
     svg {
-      width: 100%;
-      height: 100%;
+      width: 9rem;
+      height: 9rem;
     }
   }
 
   &__info {
-    flex: 0.7;
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -43,11 +44,11 @@
   &__name {
     font-size: 1.125rem;
     font-weight: 500;
-    color: #202325;
+    color: var(--black-darker);
   }
 
   &__description {
-    color: #72777a;
+    color: var(--black-lighter);
   }
 
   &__rate {
@@ -56,7 +57,7 @@
     align-items: center;
     gap: 0.3rem;
     font-size: 0.875rem;
-    color: #72777a;
+    color: var(--black-lighter);
   }
 
   &__rate-start {
@@ -90,7 +91,7 @@
     font-size: 0.9rem;
 
     &:hover {
-      background-color: #1876fb;
+      background-color: var(--primary);
       color: #fff;
     }
   }
@@ -105,5 +106,27 @@
 @media screen and (max-width: 540px) {
   .select-time {
     grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .coach-card__info {
+    gap: 0.3rem;
+  }
+
+  .coach-card__name {
+    font-size: 1rem;
+  }
+
+  .coach-card__description {
+    font-size: 0.8rem;
+  }
+
+  .coach-card__rate {
+    font-size: 0.8rem;
+  }
+
+  .select-time {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
