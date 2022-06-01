@@ -5,6 +5,7 @@
 
   &__nav {
     display: flex;
+    justify-content: center;
     align-items: baseline;
     gap: 1.2rem;
   }
@@ -77,5 +78,54 @@
       font-size: 0.875rem;
       color: var(--primary);
     }
+  }
+}
+
+.member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.member-card {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem 0;
+
+  &__image {
+    width: 80px;
+    height: 80px;
+
+    svg {
+      width: inherit;
+      height: inherit;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__name {
+    font-size: 1.125rem;
+    margin-bottom: 0.5rem;
+  }
+
+  &__schedule {
+    font-weight: 500;
+    color: var(--black-light);
+  }
+
+  &__last {
+    font-weight: 200;
+    color: var(--black-lighter);
+  }
+
+  &__contact {
+    display: flex;
+    gap: 0.5rem;
   }
 }
