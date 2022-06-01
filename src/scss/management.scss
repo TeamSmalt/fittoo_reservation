@@ -95,12 +95,9 @@
   padding: 1rem 0;
 
   &__image {
-    width: 80px;
-    height: 80px;
-
     svg {
-      width: inherit;
-      height: inherit;
+      width: 5rem;
+      height: 5rem;
     }
   }
 
@@ -115,11 +112,13 @@
   }
 
   &__schedule {
+    font-size: 1rem;
     font-weight: 500;
     color: var(--black-light);
   }
 
   &__last {
+    font-size: 1rem;
     font-weight: 200;
     color: var(--black-lighter);
   }
@@ -127,5 +126,31 @@
   &__contact {
     display: flex;
     gap: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .member-card {
+    gap: 1.2rem;
+
+    &__image {
+      svg {
+        width: 4rem;
+        height: 4rem;
+      }
+    }
+
+    &__name {
+      font-size: 0.9rem;
+      margin-bottom: 0.3rem;
+    }
+
+    &__schedule {
+      font-size: 0.75rem;
+    }
+
+    &__last {
+      font-size: 0.75rem;
+    }
   }
 }
