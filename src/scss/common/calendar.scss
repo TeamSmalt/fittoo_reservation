@@ -1,21 +1,21 @@
 .calendar {
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  padding: 8px 16px;
-  border-radius: 25px;
-  background-color: #f8fbff;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 1.125rem;
+  background-color: var(--primary-lightest);
 
   &__select {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 8px;
+    gap: 0.5rem;
 
     span {
-      padding: 8px 16px;
-      border-radius: 12px;
-      background: #1876fb;
+      padding: 0.5rem 1rem;
+      border-radius: 0.75rem;
+      background: var(--primary);
       color: #fff;
     }
 
@@ -27,7 +27,7 @@
   &__days {
     display: flex;
     justify-content: space-between;
-    padding: 8px;
+    padding: 0.5rem;
   }
 
   &__day {
@@ -38,27 +38,27 @@
 
   &__koDay {
     font-weight: 400;
-    font-size: 12px;
-    line-height: 12px;
+    font-size: 0.75rem;
+    line-height: 0.75rem;
     color: #72777a;
-    margin-bottom: 8px;
+    margin-bottom: 0.5rem;
   }
 
   &__selectBtn {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 8px;
-    border-radius: 10px;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
 
     &:hover,
     &.calendar--selected {
       color: #fff;
-      background-color: #1876fb;
+      background-color: var(--primary);
     }
   }
 
   &__event {
-    font-size: 18px;
+    font-size: 0.5rem;
   }
 }
