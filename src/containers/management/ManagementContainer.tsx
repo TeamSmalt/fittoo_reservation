@@ -29,7 +29,7 @@ const ManagementContainer = ({}: ManagementContainerProps) => {
       <PrevStage title={title} />
       <div className="management__nav">
         <NavLink
-          to="schedules"
+          to="/schedules"
           className={({ isActive }) =>
             isActive ? 'management__link select' : 'management__link'
           }
@@ -38,7 +38,7 @@ const ManagementContainer = ({}: ManagementContainerProps) => {
         </NavLink>
 
         <NavLink
-          to="members"
+          to="/members"
           className={({ isActive }) =>
             isActive ? 'management__link select' : 'management__link'
           }
