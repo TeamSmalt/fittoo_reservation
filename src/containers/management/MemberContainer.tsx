@@ -1,5 +1,6 @@
-import MemberCard from 'components/management/MemberCard';
 import React from 'react';
+
+import MemberCard from 'components/management/MemberCard';
 
 type MemberContainerProps = {};
 
