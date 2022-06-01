@@ -4,7 +4,7 @@
   gap: 8px;
   padding: 8px 16px;
   border-radius: 25px;
-  background-color: #f8fbff;
+  background-color: var(--primary-lightest);
 
   &__select {
     display: flex;
@@ -15,7 +15,7 @@
     span {
       padding: 8px 16px;
       border-radius: 12px;
-      background: #1876fb;
+      background: var(--primary);
       color: #fff;
     }
 
@@ -54,7 +54,7 @@
     &:hover,
     &.calendar--selected {
       color: #fff;
-      background-color: #1876fb;
+      background-color: var(--primary);
     }
   }
 
