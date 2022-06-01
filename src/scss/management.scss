@@ -1,0 +1,81 @@
+.management {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  &__nav {
+    display: flex;
+    align-items: baseline;
+    gap: 1.2rem;
+  }
+
+  &__link {
+    font-size: 1.5rem;
+    color: var(--grey-dark);
+
+    &.select {
+      font-weight: 700;
+      font-size: 2rem;
+      color: var(--black-dark);
+    }
+  }
+}
+
+.schedule {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.schedule-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  &__time {
+    font-weight: 500;
+    font-size: 1.2rem;
+  }
+
+  &__user {
+    display: flex;
+    gap: 2rem;
+    padding: 1rem 0.9rem;
+    background-color: var(--primary-lightest);
+    border-radius: 1.125rem;
+  }
+
+  &__image {
+    width: 80px;
+    height: 80px;
+
+    svg {
+      width: inherit;
+      height: inherit;
+      border: 1px solid var(--grey-light);
+      border-radius: 50%;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  &__name {
+    font-weight: 600;
+    font-size: 1.25rem;
+  }
+
+  &__contact {
+    display: flex;
+    gap: 0.5rem;
+
+    button {
+      font-size: 0.875rem;
+      color: var(--primary);
+    }
+  }
+}
