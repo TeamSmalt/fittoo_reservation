@@ -3,6 +3,9 @@ import React from 'react';
 import Phone from 'assets/svg/Phone';
 import DefaultImage from 'assets/svg/DefaultImage';
 import RatingStar from 'assets/svg/RatingStar';
+import ChatIcon from 'assets/svg/ChatIcon';
+
+import { Link } from 'react-router-dom';
 
 type CoachCardProps = {};
 
@@ -25,6 +28,10 @@ const CoachCard = ({}: CoachCardProps) => {
           <a href="tel:01055879732">
             <Phone />
           </a>
+
+          <Link to="">
+            <ChatIcon />
+          </Link>
         </div>
       </div>
     </div>

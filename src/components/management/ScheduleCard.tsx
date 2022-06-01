@@ -3,6 +3,7 @@ import React from 'react';
 import DefaultImage from 'assets/svg/DefaultImage';
 import Phone from 'assets/svg/Phone';
 import ManagementWrite from 'assets/svg/ManagementWrite';
+import ChatIcon from 'assets/svg/ChatIcon';
 
 import { Link } from 'react-router-dom';
 
@@ -22,9 +23,14 @@ const ScheduleCard = ({}: ScheduleCardProps) => {
             <Link to="">
               <ManagementWrite />
             </Link>
-            <a href="tel:01055879732">
+
+            <a href="tel:">
               <Phone />
             </a>
+
+            <Link to="">
+              <ChatIcon />
+            </Link>
 
             <button>예약취소</button>
           </div>

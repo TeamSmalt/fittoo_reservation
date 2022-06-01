@@ -3,6 +3,7 @@ import React from 'react';
 import DefaultImage from 'assets/svg/DefaultImage';
 import ManagementWrite from 'assets/svg/ManagementWrite';
 import Phone from 'assets/svg/Phone';
+import ChatIcon from 'assets/svg/ChatIcon';
 
 import { Link } from 'react-router-dom';
 
@@ -27,6 +28,10 @@ const MemberCard = ({}: MemberCardProps) => {
         <a href="tel:">
           <Phone />
         </a>
+
+        <Link to="">
+          <ChatIcon />
+        </Link>
       </div>
     </div>
   );
