@@ -1,6 +1,5 @@
 import React from 'react';
 
-import Message from 'assets/svg/Message';
 import Phone from 'assets/svg/Phone';
 import DefaultImage from 'assets/svg/DefaultImage';
 import RatingStar from 'assets/svg/RatingStar';
@@ -26,8 +25,6 @@ const CoachCard = ({}: CoachCardProps) => {
           <a href="tel:01055879732">
             <Phone />
           </a>
-
-          <Message />
         </div>
       </div>
     </div>
