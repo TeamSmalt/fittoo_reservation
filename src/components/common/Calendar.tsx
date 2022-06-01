@@ -38,7 +38,13 @@ const Calendar = ({}: CalendarProps) => {
   }, [currentDate]);
 
   //! 몇 주
-  const getWeekNum = useMemo(() => Math.ceil(currentDate.get('D') / 7), [currentDate]);
+  const getWeekNum = useMemo(() => {
+    const date = currentDate.get('date');
+
+    const weekDay = currentDate.date(1).get('day');
+
+    return Math.floor((weekDay - 1 + date) / 7 + 1);
+  }, [currentDate]);
 
   //! 이전 주, 다음 주
   const nextWeek = () => setCurrentDate(currentDate.add(7, 'day'));
